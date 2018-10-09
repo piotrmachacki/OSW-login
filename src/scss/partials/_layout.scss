@@ -12,7 +12,13 @@
 
 	.wrapper {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
+	}
+
+	&.logged {
+		.wrapper {
+			flex-wrap: wrap;
+		}
 	}
 }
 
@@ -33,6 +39,8 @@
 		align-items: center;
 
 		li {
+			margin: 10px 0;
+
 			a {
 				padding: 5px;
 				margin: 5px 20px;
@@ -138,10 +146,10 @@
 	flex-grow: 100;
 	
 	.container-fluid {
-		background: url('../images/elem-bg-white.png') center center no-repeat;
+		background: #fff url('../images/elem-bg-white.png') center center no-repeat;
 		flex-grow: 100;
-		padding-top: 50px;
-		padding-bottom: 70px;
+		padding-top: 54px;
+		padding-bottom: 84px;
 		box-shadow: -3px 0 3px rgba($brand-color-1, 0.3),  3px 0 3px rgba($brand-color-1, 0.3);
 	}
 }
@@ -195,7 +203,7 @@
 
 .login-form {
 	width: 54%;
-	min-width: 400px;
+	min-width: 480px;
 	background-color: #fff;
 	border: 1px solid rgba($brand-color-1, 0.3);
 	padding: 40px;
@@ -211,6 +219,7 @@
 
 	.button-group {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 

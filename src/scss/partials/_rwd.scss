@@ -1,0 +1,83 @@
+@media (max-width: map-get($grid-breakpoints, "xl")-1) {
+
+
+
+}
+
+@media (max-width: map-get($grid-breakpoints, "lg")-1) {
+
+	.logged .logo-wrap {
+		width: 100%;
+	}
+
+	.logged .nav-wrap {
+		justify-content: flex-start;
+		flex-grow: 1;
+	}
+
+}
+
+@media (max-width: map-get($grid-breakpoints, "md")-1) {
+
+	.logged .logo-wrap {
+		width: auto;
+	}
+
+	.logged .nav-wrap {
+		justify-content: flex-end;
+
+		ul {
+			li {
+				margin-left: 20px;
+
+				a {
+					margin: 0;
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+
+	.logged .menu-wrap {
+		width: 100%;
+		justify-content: flex-end;
+	}
+	
+}
+
+@media (max-width: map-get($grid-breakpoints, "sm")-1) {
+
+	.logged .logo-wrap {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.logged .nav-wrap {
+		width: 100%;
+		justify-content: center;
+
+		ul {
+			justify-content: space-between;
+
+			li {
+				margin: 10px;
+			}
+		}
+	}
+
+	.logged .menu-wrap {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.login-form {
+		width: 100%;
+		min-width: unset;
+
+		.button-group {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+}
