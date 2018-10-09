@@ -78,7 +78,7 @@ gulp.task('sass', () => {
 		.pipe(wait(1000))
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			outputStyle: 'expanded' // nested | expanded | compact | compressed
+			outputStyle: 'compressed' // nested | expanded | compact | compressed
 		})).on("error", function (error) {
 				gutil.log(
 					gutil.colors.red("SASS compile error:"),

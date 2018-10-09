@@ -249,12 +249,13 @@
 				margin-bottom: 10px;
 
 				.progress-bar {
+					width: 0%;
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
 					color: #fff;
 					background-color: $brand-color-5;
-					transition: $transition;
+					transition: all 1s ease;
 				}
 			}
 
@@ -267,5 +268,37 @@
 				}
 			}
 		}
+	}
+}
+
+
+
+// page loader
+//------------------------------------------------------------
+.page-loader-wrap {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+
+	.page-loader {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+body.loading {
+	overflow-y: hidden;
+
+	.page-loader-wrap {
+		display: flex;
 	}
 }
