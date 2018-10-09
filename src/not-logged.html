@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+@@include('./part/head.html', {"site": ""})
+
+<body>
+
+	@@include('./part/header-not-logged.html')
+
+	<main class="main-section">
+
+		<div class="container-fluid">
+					
+			<div class="login-form-wrap">
+				<form class="login-form" action="#" type="post">
+					
+					<h4 class="heading">Logowanie</h4>
+				
+					<div class="form-group">
+						<label for="login">Nazwa użytkownika lub hasło</label>
+						<input id="login" type="text" name="login">
+					</div>
+				
+					<div class="form-group">
+						<label for="password">Hasło</label>
+						<input id="password" type="password" name="password">
+					</div>
+				
+					<div class="form-group checkbox-group">
+						<input id="remember" type="checkbox" name="remember">
+						<label for="remember">
+							<i class="fas fa-check"></i>
+							<span>Zapamietaj dane logowania</span>
+						</label>
+					</div>
+				
+					<div class="button-group">
+						<button class="btn btn-primary" type="button">Logowanie</button>
+						<button class="btn btn-secondary" type="button">Rejestracja</button>
+					</div>
+				
+					<div class="footer">
+						<a href="#" class="effect-1">Nie pamiętasz hasła?</a>
+					</div>
+				
+				</form>
+			</div>
+				
+		</div>
+
+	</main>
+
+	@@include('./part/footer.html')
+	
+	@@include('./part/scripts.html')
+
+</body>
+
+</html>

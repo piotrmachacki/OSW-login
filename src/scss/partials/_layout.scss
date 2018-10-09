@@ -1,0 +1,243 @@
+//============================================================
+// LAYOUT
+//============================================================
+
+
+
+// header
+//------------------------------------------------------------
+.main-header {
+	background: $brand-color-4 url('../images/elem-bg-univ-mini.jpg') top center repeat-y;
+	background-size: cover;
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.logo-wrap {
+	display: inline-flex;
+}
+
+.nav-wrap {
+	display: inline-flex;
+	justify-content: center;
+	flex-grow: 10;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		li {
+			a {
+				padding: 5px;
+				margin: 5px 20px;
+				font-size: 1.5rem;
+				color: #fff;
+				text-shadow: 0 0 20px #fff;
+
+				&:hover {
+					text-shadow: 0 0 50px #fff, 0 0 50px #fff, 0 0 50px #fff, 0 0 50px #fff;
+				}
+			}
+		}
+	}
+}
+
+.menu-wrap {
+	display: inline-flex;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		li {
+			.item {
+				width: 77px;
+				height: 77px;
+				background: rgba(#fff, 0.2);
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				position: relative;
+				border: 1px solid rgba(#fff, 0.1);
+				margin: 5px 0 5px 5px;
+				font-size: 14px;
+				text-align: center;
+				color: #fff;
+
+				i {
+					font-size: 40px;
+					margin-bottom: 5px;
+					text-shadow: 0 0 20px rgba(#fff, 0.3);
+				}
+
+				span {
+					text-shadow: 0 0 10px rgba(#fff, 0.3);
+				}
+
+				&.active {
+					height: 82px;
+					background: linear-gradient(to bottom, #2e347e, #1f81be);
+					margin-top: 0;
+
+					&:after {
+						content: '';
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 20px 0 30px 77px;
+						border-color: #1f81be transparent transparent #1f81be;
+						position: absolute;
+						top: 100%;
+						left: -1px;
+					}
+					
+					i {
+						text-shadow: 0 0 20px rgba(#2e347e, 0.8);
+					}
+
+					span {
+						text-shadow: 0 0 10px rgba(#2e347e, 0.7);
+					}
+
+				}
+
+				&:hover {
+
+					i {
+						text-shadow: 0 0 30px rgba(#fff, 0.8);
+					}
+
+					span {
+						text-shadow: 0 0 20px rgba(#fff, 0.7);
+					}
+				}
+
+				&:not(.active):hover {
+					background: rgba(#fff, 0.4);
+				}
+			}
+		}
+	}
+}
+
+
+
+// main
+//------------------------------------------------------------
+.main-section {
+	display: flex;
+	flex-grow: 100;
+	
+	.container-fluid {
+		background: url('../images/elem-bg-white.png') center center no-repeat;
+		flex-grow: 100;
+		padding-top: 50px;
+		padding-bottom: 70px;
+		box-shadow: -3px 0 3px rgba($brand-color-1, 0.3),  3px 0 3px rgba($brand-color-1, 0.3);
+	}
+}
+
+
+
+// footer
+//------------------------------------------------------------
+.main-footer {
+	background: $brand-color-4 url('../images/elem-bg-univ-mini.jpg') top center repeat-y;
+	background-size: cover;
+
+	.wrapper {
+		min-height: 44px;
+		background: url('../images/elem-bot-icons.png') center center no-repeat;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.copyright {
+			text-align: center;
+			color: #fff;
+			font-size: 18px;
+			text-shadow: 0 0 20px #fff;
+		}
+
+		.elem {
+			width: 0;
+			height: 0;
+			position: absolute;
+			left: 0;
+			bottom: 15px;
+			border-style: solid;
+			border-width: 50px 0 50px 64px;
+			border-color: transparent transparent $brand-color-3 $brand-color-3;
+		}
+	}
+}
+
+
+
+// login form
+//------------------------------------------------------------
+.login-form-wrap {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login-form {
+	width: 54%;
+	min-width: 400px;
+	background-color: #fff;
+	border: 1px solid rgba($brand-color-1, 0.3);
+	padding: 40px;
+	font-size: 18px;
+	color: darken($brand-color-1, 20);
+
+	.heading {
+		margin-bottom: 30px;
+		text-align: center;
+		font-size: 24px;
+		color: $brand-color-4;
+	}
+
+	.button-group {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.footer {
+		text-align: center;
+		
+		a {
+			color: darken($brand-color-1, 20);
+		}
+	}
+}
+
+
+
+// welcome
+//------------------------------------------------------------
+.welcome {
+	margin-top: -30px;
+	margin-bottom: 30px;
+	color: darken($brand-color-1, 20);
+	font-size: 1.1rem;
+
+	.message {
+
+	}
+
+	.user {
+		color: $brand-color-4;
+	}
+}
