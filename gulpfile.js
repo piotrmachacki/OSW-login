@@ -101,7 +101,7 @@ gulp.task('sass', () => {
 // JS task
 //============================================    
 gulp.task('js', function() {
-	return gulp.src(['./src/js/scripts.js'])
+	return gulp.src(['./node_modules/particles.js/particles.js', './src/js/scripts.js'])
 		.pipe(sourcemaps.init())
 		.pipe(concat('scripts.js'))
 		.pipe(sourcemaps.write('.'))
@@ -113,10 +113,22 @@ gulp.task('js', function() {
 });
 
 //============================================
+// copyFiles task
+//============================================    
+gulp.task('copyFiles', function() {
+	return gulp.src(['./src/**/*.json'])
+		.pipe(gulp.dest('./dist/'))
+		.pipe(browserSync.stream({
+			match: '**/*.json'
+		}))
+});
+
+//============================================
 // Watch task
 //============================================
 gulp.task('watch', function() {
 	gulp.watch('src/js/**/*.js', ['js']);
+	gulp.watch('src/**/*.json', ['copyFiles']);
 	gulp.watch('src/scss/**/*.scss', ['sass']);
 	gulp.watch("src/**/*.{html, php}", ['fileinclude']).on('change', browserSync.reload);
 	gulp.watch("src/images/**", ['imagemin']).on('change', browserSync.reload);
@@ -126,4 +138,4 @@ gulp.task('watch', function() {
 //============================================
 // Default task
 //============================================
-gulp.task('default', runSequence('clean', 'imagemin', 'fileinclude', 'sass', 'js', 'browserSync', 'watch'));
+gulp.task('default', runSequence('clean', 'imagemin', 'fileinclude', 'sass', 'js', 'copyFiles', 'browserSync', 'watch'));

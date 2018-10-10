@@ -10,6 +10,13 @@
 	background: $brand-color-4 url('../images/elem-bg-univ-mini.jpg') top center repeat-y;
 	background-size: cover;
 
+	.container-fluid {
+		.row {
+			position: relative;
+			z-index: 10;
+		}
+	}
+
 	.wrapper {
 		display: flex;
 		justify-content: flex-end;
@@ -142,8 +149,11 @@
 // main
 //------------------------------------------------------------
 .main-section {
+	background-color: #fff;
 	display: flex;
 	flex-grow: 100;
+	position: relative;
+	z-index: 5;
 	
 	.container-fluid {
 		background: #fff url('../images/elem-bg-white.png') center center no-repeat;
@@ -161,6 +171,13 @@
 .main-footer {
 	background: $brand-color-4 url('../images/elem-bg-univ-mini.jpg') top center repeat-y;
 	background-size: cover;
+
+	.container-fluid {
+		.row {
+			position: relative;
+			z-index: 10;
+		}
+	}
 
 	.wrapper {
 		min-height: 44px;
@@ -248,5 +265,22 @@
 
 	.user {
 		color: $brand-color-4;
+	}
+}
+
+
+
+// particles js
+//------------------------------------------------------------
+.particles-js {
+	.particles-js-canvas-el {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 	}
 }
